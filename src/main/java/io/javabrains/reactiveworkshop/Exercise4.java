@@ -10,9 +10,12 @@ public class Exercise4 {
 
         // Print the value from intNumberMono when it emits
         // TODO: Write code here
+        ReactiveSources.intNumberMono().subscribe(System.out::println);
 
         // Get the value from the Mono into an integer variable
         // TODO: Write code here
+        Integer block = ReactiveSources.intNumberMono().block();
+        System.out.println("Integer is " + block);
 
         System.out.println("Press a key to end");
         System.in.read();
